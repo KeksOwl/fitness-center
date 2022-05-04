@@ -1,0 +1,372 @@
+.features {
+  position: relative;
+
+  box-sizing: border-box;
+  padding-top: 115px;
+  padding-bottom: 113px;
+
+  @media (max-width: $vp-tablet) {
+    padding-top: 95px;
+    padding-bottom: 92px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    padding-top: 66px;
+    padding-bottom: 63px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    width: 100vw;
+    height: 100%;
+
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -100;
+
+    background-color: $color-ghost-white;
+  }
+}
+
+.features h2 {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Bebas Neue", "Brush Script MT", cursive;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $color-sapphire;
+
+  @media (max-width: $vp-tablet) {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  margin-top: 62px;
+
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 150px;
+
+  position: relative;
+
+  @media (max-width: $vp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 31px;
+
+    margin-top: 47px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, max-content);
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+
+    width: 29.3%;
+    height: 2px;
+
+    top: 50.5%;
+
+
+    background-color: $color-crimson-opacity;
+
+    @media (max-width: $vp-tablet) {
+      display: none;
+    }
+  }
+
+  &::before {
+    left: 60px;
+  }
+
+  &::after {
+    right: 60px;
+  }
+}
+
+.features__item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+
+  @media (max-width: $vp-mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &--centered {
+    margin-top: 11px;
+    margin-left: 1px;
+    margin-bottom: 7px;
+
+    box-sizing: border-box;
+    padding-top: 55px;
+    padding-bottom: 40px;
+
+    background-color: $color-resolution-blue;
+
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+
+    width: 240px;
+
+    flex-direction: column;
+
+    @media (max-width: $vp-tablet) {
+      grid-column: 1 / -1;
+      grid-row: auto;
+      width: 65.2%;
+      min-height: 239px;
+
+      justify-self: center;
+
+      margin-left: 0;
+      padding-top: 33px;
+    }
+
+    @media (max-width: $vp-mobile) {
+      width: 100%;
+      position: relative;
+      padding-top: 38px;
+      padding-bottom: 20px;
+      margin-top: 12px;
+
+      &::before {
+        position: absolute;
+        content: "";
+
+        width: 100vw;
+        height: 100%;
+
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+
+        background-color: $color-resolution-blue;
+      }
+    }
+  }
+
+  &--space {
+    margin-left: 87px;
+
+    @media (max-width: $vp-tablet) {
+      margin-left: 0;
+    }
+  }
+
+  &--parking {
+    margin-left: 61px;
+
+    @media (max-width: $vp-tablet) {
+      margin-left: 15px;
+
+      & .features__item-wrapper {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: $vp-mobile) {
+      margin-top: 2px;
+      margin-left: 0;
+    }
+  }
+
+  &--comfort {
+    margin-left: 80px;
+
+    @media (max-width: $vp-tablet) {
+      margin-left: 0;
+      margin-top: 4px;
+    }
+  }
+
+  &--experience {
+    margin-left: 62px;
+
+    @media (max-width: $vp-tablet) {
+      margin-left: 15px;
+      margin-top: 4px;
+
+      & .features__item-wrapper {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: $vp-mobile) {
+      margin-left: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+.features__item-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+
+  text-align: left;
+
+  margin-left: 30px;
+  margin-top: 4px;
+
+  order: 2;
+
+  @media (max-width: $vp-tablet) {
+    margin-top: 0;
+    margin-left: 28px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    margin-top: 7px;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+.features__item-inner {
+  width: min-content;
+  text-align: left;
+
+  order: 1;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  @media (max-width: $vp-tablet) {
+    width: 90px;
+  }
+}
+
+.features__item h3 {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 150%;
+
+  color: $color-sapphire;
+
+  @media (max-width: $vp-tablet) {
+    font-size: 20px;
+  }
+}
+
+.features__item p {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+
+  margin-top: 5px;
+
+  color: $color-sapphire;
+
+  @media (max-width: $vp-tablet) {
+    margin-top: 3px;
+  }
+}
+
+.features__item-inner p {
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 100%;
+
+  margin: 0;
+
+  background-image: $cobalt-to-bottom-right;
+  background-clip: text;
+  color: transparent;
+
+  @media (max-width: $vp-tablet) {
+    font-size: 58px;
+    margin-top: 0;
+  }
+
+  @media (max-width: $vp-mobile) {
+    text-align: center;
+  }
+}
+
+.features__item-inner span {
+  font-weight: 400;
+  font-size: 14px;
+
+  color: $color-persian-blue;
+
+  @media (max-width: $vp-mobile) {
+    text-align: center;
+  }
+}
+
+.features__item--centered h3 {
+  font-size: 74px;
+  line-height: 100%;
+
+  color: $color-default-white;
+
+  @media (max-width: $vp-tablet) {
+    font-size: 74px;
+  }
+}
+
+.features__item--centered span {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 150%;
+
+  color: $color-default-white;
+
+  @media (max-width: $vp-tablet) {
+    font-size: 22px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    line-height: 100%;
+  }
+}
+
+.features__item--centered p {
+  font-weight: 400;
+  font-size: 16px;
+
+  margin-top: 35px;
+
+  color: $color-default-white;
+
+  @media (max-width: $vp-tablet) {
+    margin-top: 14px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    line-height: 150%;
+  }
+}

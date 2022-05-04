@@ -1,0 +1,258 @@
+.about {
+  margin-top: 120px;
+  margin-bottom: 231px;
+
+  display: flex;
+  flex-flow: row nowrap;
+
+  justify-content: space-between;
+
+  @media (max-width: $vp-tablet) {
+    flex-flow: column wrap;
+    justify-content: unset;
+    align-items: center;
+    margin-top: 95px;
+    margin-bottom: 179px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    margin-top: 66px;
+    margin-bottom: 70px;
+  }
+}
+
+.about__wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+
+  text-align: left;
+
+  max-width: 355px;
+
+  margin-top: 44px;
+  margin-left: 60px;
+
+  @media (max-width: $vp-1365) and (min-width: $vp-desktop-only) {
+    margin-left: 0;
+    margin-right: 60px;
+  }
+
+  @media (max-width: $vp-tablet) {
+    margin: 0;
+    align-items: center;
+    text-align: center;
+
+    max-width: 80%;
+  }
+
+  @media (max-width: $vp-mobile) {
+    align-items: flex-start;
+    text-align: left;
+    max-width: unset;
+  }
+}
+
+.about__wrapper h3 {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Bebas Neue", "Brush Script MT", cursive;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $color-sapphire;
+
+  @media (max-width: $vp-tablet) {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.about__wrapper p {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+
+  color: $color-sapphire;
+
+  margin-top: 11px;
+
+  @media (max-width: $vp-tablet) {
+    margin-top: 13px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    margin-top: 10px;
+  }
+}
+
+.about__inner {
+  margin-top: 31px;
+
+  @media (max-width: $vp-tablet) {
+    margin-top: 21px;
+    margin-bottom: 43px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    margin-top: 14px;
+    margin-bottom: 32px;
+    width: 90%;
+  }
+}
+
+.about__inner p {
+  font-weight: 300;
+  font-size: 16px;
+
+  margin-top: 8px;
+
+  @media (max-width: $vp-tablet) {
+    &:nth-child(n+2) {
+      display: none;
+    }
+  }
+}
+
+.about__wrapper-visual {
+  position: relative;
+
+  height: max-content;
+
+  @media (max-width: $vp-tablet) {
+    width: 100%;
+  }
+
+  @media (max-width: $vp-mobile) {
+    height: calc(313px + 40px + 167px);
+  }
+}
+
+.about__wrapper-visual img {
+  width: 660px;
+  height: 401px;
+
+  object-fit: cover;
+
+  @media (max-width: $vp-tablet) {
+    width: 100%;
+    max-width: 678px;
+
+    height: 345px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    max-width: 320px;
+
+    height: 313px;
+
+    position: absolute;
+    width: 100vw;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+}
+
+.about__inner-visual {
+  position: absolute;
+  left: -9.5%;
+  top: 71%;
+
+  @media (max-width: $vp-tablet) {
+    left: 50%;
+    top: 74.7%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: $vp-mobile) {
+    top: unset;
+    bottom: 0;
+  }
+}
+
+.about__video {
+  display: block;
+  width: 364px;
+  height: 228px;
+
+  position: relative;
+
+  user-select: none;
+
+  &:hover,
+  &:focus {
+    &::before {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.5;
+    }
+  }
+
+  @media (max-width: $vp-tablet) {
+    width: 266px;
+    height: 167px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    width: 320px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    width: 100px;
+    height: 100px;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    background-image: url("../img/about/video-playbutton.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (max-width: $vp-tablet) {
+      width: 73px;
+      height: 73px;
+      left: 49.5%;
+    }
+
+    @media (max-width: $vp-mobile) {
+      left: 50.2%;
+      top: 49.5%;
+    }
+  }
+}
+
+.about__video img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: $vp-tablet) {
+    height: 100%;
+  }
+
+  @media (max-width: $vp-mobile) {
+    height: 100%;
+  }
+}

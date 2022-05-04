@@ -1,0 +1,29 @@
+.footer-nav {
+  width: 50%;
+
+  @media (max-width: $vp-tablet) {
+    width: 65%;
+  }
+
+  @media (max-width: $vp-mobile) {
+    width: 100%;
+
+    margin-top: 15px;
+  }
+}
+
+.footer-nav__list {
+  margin: 22px 0;
+
+  box-sizing: border-box;
+  padding-left: 45px;
+
+  @media (max-width: $vp-tablet) {
+    padding-left: 38px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    padding: 0;
+    margin: 0;
+  }
+}

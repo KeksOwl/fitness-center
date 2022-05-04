@@ -1,0 +1,317 @@
+.coaches {
+  margin-top: 114px;
+  margin-bottom: 120px;
+
+  @media (max-width: $vp-tablet) {
+    margin-top: 95px;
+    margin-bottom: 100px;
+
+    padding: 0 56px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    margin-top: 68px;
+    margin-bottom: 50px;
+    padding-left: 32px;
+    padding-right: 33px;
+  }
+}
+
+.coaches__wrapper {
+  display: grid;
+  position: relative;
+}
+
+.coaches h2 {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Bebas Neue", "Brush Script MT", cursive;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $color-sapphire;
+
+  text-align: left;
+  margin-left: 2px;
+  margin-bottom: 56px;
+
+  @media (max-width: $vp-tablet) {
+    font-size: 42px;
+    line-height: 42px;
+
+    text-align: center;
+
+    margin-bottom: 45px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    font-size: 32px;
+    line-height: 32px;
+
+    margin-bottom: 44px;
+  }
+}
+
+.coaches__slider {
+  width: 100%;
+  max-width: 100%;
+
+  min-height: 0;
+  min-width: 0;
+
+  position: static;
+}
+
+.coaches__button {
+  color: $color-dark-grey;
+  height: 39px;
+
+  @media (max-width: $vp-mobile) {
+    height: 25px;
+  }
+
+  &::after {
+    font-size: 32px;
+
+    @media (max-width: $vp-mobile) {
+      font-size: 20px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &--prev {
+    left: -62px;
+
+    @media (max-width: $vp-mobile) {
+      left: -41px;
+    }
+  }
+
+  &--next {
+    right: -62px;
+
+    @media (max-width: $vp-mobile) {
+      right: -41px;
+    }
+  }
+}
+
+.coaches__slider-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 113%;
+
+  z-index: -96;
+
+  @media (max-width: $vp-tablet) {
+    padding-top: 109.5%;
+  }
+
+  @media (max-width: $vp-mobile) {
+    padding-top: 121.5%;
+  }
+}
+
+.coaches__slider-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  z-index: -95;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-color: $color-sapphire-opacity-additional;
+
+  box-sizing: border-box;
+  padding: 22px 30px;
+
+  &:hover,
+  &:focus {
+    &::before {
+      position: absolute;
+      content: "";
+
+      width: 100%;
+      height: 100%;
+
+      left: 0;
+      top: 0;
+      z-index: -98;
+
+      background-color: $color-sapphire-opacity-additional;
+    }
+
+    & h3 {
+      margin-top: 30px;
+
+      @media (max-width: $vp-tablet) {
+        margin-right: 14px;
+      }
+
+      @media (max-width: $vp-mobile) {
+        margin-right: 9px;
+        margin-top: 20px;
+      }
+    }
+
+    & p {
+      display: block;
+    }
+
+    & .coaches__slider-slide-list {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-start;
+    }
+  }
+}
+
+.coaches__slider-slide {
+  z-index: -97;
+
+  position: relative;
+
+  width: 260px;
+  min-height: 294px;
+
+  @media (max-width: $vp-tablet) {
+    width: 268px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    width: 100%;
+  }
+}
+
+.coaches__slider-slide h3 {
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+
+  color: $color-default-white;
+
+  width: 90%;
+
+  display: block;
+  margin: 0 auto;
+  margin-top: auto;
+
+  z-index: 1;
+
+  @media (max-width: $vp-tablet) {
+    margin-right: 6px;
+  }
+}
+
+.coaches__slider-slide img {
+  display: block;
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+  z-index: -99;
+
+  object-fit: contain;
+
+  @media (max-width: $vp-tablet) {
+    object-fit: cover;
+  }
+}
+
+.coaches__slider-slide p {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 100%;
+
+  color: $color-spindle;
+
+  z-index: 1;
+
+  display: none;
+
+  @media (max-width: $vp-tablet) {
+    margin-right: 6px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    margin-right: 0;
+  }
+}
+
+
+.coaches__slider-slide-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: none;
+
+  text-align: left;
+
+  margin-top: 37px;
+  margin-left: 41px;
+
+  word-wrap: break-word;
+
+  @media (max-width: $vp-mobile) {
+    margin-left: 20px;
+  }
+}
+
+.coaches__slider-slide-item {
+  font-size: 14px;
+  line-height: 150%;
+
+  color: $color-default-white;
+
+  margin-top: 13px;
+
+  position: relative;
+
+  &:first-child {
+    margin-top: unset;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    left: -16px;
+    top: 7px;
+
+    background-color: $color-default-white;
+    border-radius: 50%;
+  }
+}
