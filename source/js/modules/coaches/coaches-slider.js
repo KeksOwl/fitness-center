@@ -14,6 +14,8 @@ const initSlider = () => {
     spaceBetween: 40,
     slidersPerGroup: 1,
 
+    loop: true,
+
     breakpoints: {
       320: {
         slidesPerView: 1,

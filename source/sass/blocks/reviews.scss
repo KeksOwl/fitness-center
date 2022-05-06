@@ -44,7 +44,7 @@
   margin: 0;
   padding: 0;
 
-  font-family: "Bebas Neue", "Brush Script MT", cursive;
+  font-family: "Bebas Neue", "Arial", sans-serif;
   font-weight: 700;
   font-size: 49px;
   line-height: 49px;
@@ -70,6 +70,8 @@
   background-color: $color-resolution-blue;
 
   min-height: 242px;
+  height: max-content;
+  margin: auto 0;
 
   box-shadow: 0 0 40px $color-resolution-blue-opacity;
 
@@ -79,16 +81,18 @@
 
   box-sizing: border-box;
   padding: 54px 62px;
+  padding-bottom: 41px;
 
   @media (max-width: $vp-tablet) {
     padding: 54px 65px;
+    padding-bottom: 31px;
   }
 
   @media (max-width: $vp-mobile) {
     position: relative;
 
     padding: 40px 25px;
-    padding-bottom: 33px;
+    padding-bottom: 10px;
 
     align-content: flex-start;
   }
@@ -141,11 +145,11 @@
 
   color: $color-default-white;
 
-  margin-top: 13px;
+  margin: 13px 0;
 
   @media (max-width: $vp-mobile) {
     text-align: center;
-    margin-top: 23px;
+    margin: 23px 0;
   }
 }
 

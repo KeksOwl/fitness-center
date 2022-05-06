@@ -35,7 +35,7 @@
   margin: 0;
   padding: 0;
 
-  font-family: "Bebas Neue", "Brush Script MT", cursive;
+  font-family: "Bebas Neue", "Arial", sans-serif;
   font-weight: 700;
   font-size: 49px;
   line-height: 49px;
@@ -66,6 +66,7 @@
   grid-template-columns: 1fr max-content 1fr;
   grid-template-rows: repeat(2, 1fr);
   row-gap: 150px;
+  column-gap: 20px;
 
   position: relative;
 
@@ -120,6 +121,9 @@
   }
 
   &--centered {
+    flex-flow: column nowrap;
+    align-items: center;
+
     margin-top: 11px;
     margin-left: 1px;
     margin-bottom: 7px;
@@ -176,16 +180,24 @@
   &--space {
     margin-left: 87px;
 
+    @media (max-width: $vp-1365) and (min-width: $vp-desktop-only) {
+      margin-left: 0;
+    }
+
     @media (max-width: $vp-tablet) {
       margin-left: 0;
     }
   }
 
   &--parking {
-    margin-left: 61px;
+    margin-left: 41px;
+
+    @media (max-width: $vp-1365) and (min-width: $vp-desktop-only) {
+      margin-left: 0;
+    }
 
     @media (max-width: $vp-tablet) {
-      margin-left: 15px;
+      margin-left: 5px;
 
       & .features__item-wrapper {
         margin-left: 0;
@@ -201,6 +213,10 @@
   &--comfort {
     margin-left: 80px;
 
+    @media (max-width: $vp-1365) and (min-width: $vp-desktop-only) {
+      margin-left: 0;
+    }
+
     @media (max-width: $vp-tablet) {
       margin-left: 0;
       margin-top: 4px;
@@ -208,10 +224,14 @@
   }
 
   &--experience {
-    margin-left: 62px;
+    margin-left: 42px;
+
+    @media (max-width: $vp-1365) and (min-width: $vp-desktop-only) {
+      margin-left: 0;
+    }
 
     @media (max-width: $vp-tablet) {
-      margin-left: 15px;
+      margin-left: 5px;
       margin-top: 4px;
 
       & .features__item-wrapper {
@@ -250,7 +270,6 @@
 }
 
 .features__item-inner {
-  width: min-content;
   text-align: left;
 
   order: 1;
@@ -302,6 +321,8 @@
 
   margin: 0;
 
+  word-break: break-all;
+
   background-image: $cobalt-to-bottom-right;
   background-clip: text;
   color: transparent;
@@ -332,6 +353,9 @@
   line-height: 100%;
 
   color: $color-default-white;
+
+  max-width: 90%;
+  word-break: break-all;
 
   @media (max-width: $vp-tablet) {
     font-size: 74px;

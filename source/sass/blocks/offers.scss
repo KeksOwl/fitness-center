@@ -3,7 +3,7 @@
   padding: 0;
   margin-top: 115px;
 
-  font-family: "Bebas Neue", "Brush Script MT", cursive;
+  font-family: "Bebas Neue", "Arial", sans-serif;
   font-weight: 700;
   font-size: 49px;
   line-height: 49px;
@@ -66,10 +66,16 @@
   flex-flow: column nowrap;
   align-items: flex-start;
 
+  grid-column: -1 / -2;
+
   min-height: 211px;
 
   box-sizing: border-box;
   padding: 24px 28px;
+
+  @media (max-width: $vp-tablet) {
+    grid-column: auto;
+  }
 
   @media (max-width: $vp-mobile) {
     align-items: center;
@@ -80,6 +86,7 @@
   &--year {
     border: none;
 
+    grid-column: 1 / 2;
     grid-row: 1 / -1;
 
     background-color: $color-torch-red;
@@ -124,12 +131,17 @@
       background-size: cover;
       background-position: 50% 0;
 
-      @media (min-resolution: 2dppx) {
+      @media (min-resolution: 2dppx) and (min-width: $vp-desktop-only) {
         background-image: url("../img/offers/offers-photo@2x.png");
       }
 
       @media (max-width: $vp-tablet) {
         width: 143.4%;
+        background-image: url("../img/offers/offers-tablet.png");
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/offers/offers-tablet@2x.png");
+        }
       }
 
       @media (max-width: $vp-mobile) {
@@ -137,6 +149,12 @@
         left: 0;
         top: 50%;
         height: 50%;
+
+        background-image: url("../img/offers/offers-mobile.png");
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/offers/offers-mobile@2x.png");
+        }
       }
     }
   }
@@ -188,6 +206,7 @@
   color: $color-resolution-blue;
 
   margin-top: 10px;
+  margin-bottom: 20px;
 
   text-align: left;
 

@@ -62,7 +62,7 @@
 }
 
 .page-header__tel {
-  font-family: "Bebas Neue", "Brush Script MT", cursive;
+  font-family: "Bebas Neue", "Arial", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 26px;
@@ -79,6 +79,10 @@
 
   &:active {
     opacity: 0.5;
+  }
+
+  @media (max-width: $vp-1365) and (min-width: $vp-desktop-only) {
+    margin-top: 0;
   }
 
   @media (max-width: $vp-tablet) {

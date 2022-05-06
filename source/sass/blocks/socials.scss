@@ -1,5 +1,12 @@
 .socials {
+  max-width: 30%;
+
+  @media (max-width: $vp-tablet) {
+    max-width: 20%;
+  }
+
   @media (max-width: $vp-mobile) {
+    max-width: unset;
     margin: 20px 0;
   }
 }

@@ -12,7 +12,11 @@
   justify-content: center;
 
   @media (max-width: $vp-tablet) {
-    column-gap: 30px;
+    column-gap: unset;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
   }
 
   @media (max-width: $vp-mobile) {
@@ -27,11 +31,26 @@
 .site-list__item {
   text-align: left;
 
+  @media (max-width: $vp-tablet) {
+    margin-right: 15px;
+    margin-left: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   @media (max-width: $vp-mobile) {
+    margin-right: unset;
+    margin-left: unset;
     margin-top: 21px;
 
     &:first-child {
       margin-top: 40px;
+    }
+
+    &:last-child {
+      margin-right: unset;
     }
   }
 }
